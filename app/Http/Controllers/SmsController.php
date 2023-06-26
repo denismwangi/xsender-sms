@@ -44,6 +44,17 @@ class SmsController extends Controller
                 'from' => $twilioNumber,
                 'body' => $request->message
             ]);
+
+            if (substr($request->receiver, 0, 1) != '+')
+            {
+                $phone ='+'. $request->receiver;
+
+            }else{
+                $phone = $request->receiver;
+            }
+
+            
+
             $sms = new Sms;
             $sms->phone = $phone;
             $sms->message = $request->message;
@@ -80,7 +91,12 @@ class SmsController extends Controller
             {
                 $phone ='+'. $p->phone;
 
+            }else{
+                $phone = $p->phone;
             }
+
+
+            
 
     		try {
 	            $accountSid = env('TWILIO_SID');
@@ -102,8 +118,7 @@ class SmsController extends Controller
 	            $sms->status = 1;
 	            $sms->save();
 	 
-	            return back()
-	            ->with('success','Sms has been successfully sent.');
+	            
 	 
 	         } catch (\Exception $e) {
 	             dd($e->getMessage());
@@ -114,6 +129,9 @@ class SmsController extends Controller
 
     		# code...
     	}
+
+        return back()
+                ->with('success','Sms has been successfully sent.');
 
     }
 }

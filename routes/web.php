@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SmsController;
+
+Route::get('/', [ SmsController::class, 'index' ])->name('get.sms.form');
+
  
  
 Route::get('send-sms', [ SmsController::class, 'index' ])->name('get.sms.form');

@@ -6,9 +6,12 @@
    </head>
    <body>
       <div class="container mt-5">
+
+         
          <div class="panel panel-primary">
-            <div class="panel-heading">
+            <div class="panel-heading" style="display: flex;">
                <h2>Xsnder</h2>
+                <a href="{{url('send-sms-bulk')}}" class="btn btn-info float-right" style="margin-left: 300px;">Send Bulk Sms</a>
             </div>
             <div class="panel-body">
                @if ($message = Session::get('success'))

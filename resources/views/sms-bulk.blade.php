@@ -8,7 +8,9 @@
       <div class="container mt-5">
          <div class="panel panel-primary">
             <div class="panel-heading">
-               <h2>Xsnder Bulk Send</h2>
+               
+            <h2>Xsnder Bulk Send</h2>
+                <a href="{{url('/')}}" class="btn btn-info float-right" style="margin-left: 300px;">Go Back</a>
             </div>
             <div class="panel-body">
                @if ($message = Session::get('success'))
