@@ -45,7 +45,7 @@
                            <textarea name="message" class="form-control"></textarea>
                         </div>
                         <div class="col-md-6 form-group">
-                           <button type="submit" class="btn btn-success">Send SMS</button>
+                           <button type="submit" class="btn btn-success">Send Message</button>
                         </div>
                      </div>
                   </div>

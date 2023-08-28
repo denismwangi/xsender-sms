@@ -11,7 +11,7 @@
          <div class="panel panel-primary">
             <div class="panel-heading" style="display: flex;">
                <h2>Xsnder</h2>
-                <a href="{{url('send-sms-bulk')}}" class="btn btn-info float-right" style="margin-left: 300px;">Send Bulk Sms</a>
+                <a href="{{url('send-sms-bulk')}}" class="btn btn-info float-right" style="margin-left: 300px;">Send Bulk Texts</a>
             </div>
             <div class="panel-body">
                @if ($message = Session::get('success'))
@@ -46,7 +46,7 @@
                            <textarea name="message" class="form-control"></textarea>
                         </div>
                         <div class="col-md-6 form-group">
-                           <button type="submit" class="btn btn-success">Send SMS</button>
+                           <button type="submit" class="btn btn-success">Send Message</button>
                         </div>
                      </div>
                   </div>
